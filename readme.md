@@ -1,4 +1,4 @@
-# Assement 1
+# [Assement 1](https://senpaizuri.github.io/fe3-assessment-1/)
 For this first assesment I was tasked with handeling a dataset and making a visual of the data.
 
 ![Preview](preview.png)
