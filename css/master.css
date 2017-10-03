@@ -1,0 +1,32 @@
+body {
+  font: 10px sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #2e2e2e;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+}
+svg{
+  margin: auto;
+  display: block;
+}
+.axis path,
+.axis line {
+  fill: none;
+  stroke:rgba(225,225,225,.5);
+  shape-rendering: crispEdges;
+}
+text{
+  fill: #fff;
+}
+.area {
+  fill: transparent;
+  stroke-width:2px;
+}
+
+.animateLine{
+  transition: 10s all ease;
+}
