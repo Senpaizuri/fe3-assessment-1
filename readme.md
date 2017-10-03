@@ -19,7 +19,7 @@ I had a look the pre-build [examples](https://github.com/d3/d3/wiki/Gallery) and
 Only this morning I realised there also was a simple  [Line Chart](https://bl.ocks.org/mbostock/3883245). But by then it was already too late.
 That evening I already rebuild the Bivariate chart into a Line Chart with common sense and a little bit of trial and error.
 
-The example was build in D3 version 3. I first hooked up my own dataset and went bug-fixing. Since the code wasn't meant to handle de dataset I supplied I had to rewrite a few lines.
+The example was build in D3 **v.3**. I first hooked up my own dataset and went bug-fixing. Since the code wasn't meant to handle de dataset I supplied I had to rewrite a few lines.
 
 ```Javascript
   //Example code
@@ -67,6 +67,41 @@ Also, because the example was meant for 3 keys, I rewrote this code block;
       return d.temp
     }))
 ```
-Whilst "fixing" the code i simultaneously refactored all of the deprecated code.
+Whilst "fixing" the code i simultaneously refactored all of the deprecated code to **v.4**.
 
 ### The Fun Stuff
+
+Now that the code was fully functioning and showing the data I wanted to pimp the graph with some budget animations and gradients.
+
+For the gradients I made a **Hue** object. This stores the prefered colors for the gradient
+```Javascript
+hue =[                      
+      {
+        'color':'#5BC0EB',
+        'stop':'0%'
+      },
+      {
+        'color':'#9BC53D',
+        'stop':'50%'
+      },
+      {
+        'color':'#FDE74C',
+        'stop':'75%'
+      },
+      {
+        'color':'#F34213',
+        'stop':'100%'
+      }
+    ]
+```
+## Features
+*  [D3 Time](https://github.com/d3/d3/blob/master/API.md#time-formats-d3-time-format)       - https://github.com/d3/d3/blob/master/API.md#time-formats-d3-time-format
+*  [D3 Shapes](https://github.com/d3/d3/blob/master/API.md#shapes-d3-shape)     - https://github.com/d3/d3/blob/master/API.md#shapes-d3-shape
+*  [Area Chart](https://bl.ocks.org/mbostock/3884914)    - https://bl.ocks.org/mbostock/3884914
+*  [Gradients](https://www.w3schools.com/graphics/svg_grad_linear.asp)     - https://www.w3schools.com/graphics/svg_grad_linear.asp
+*  [Domain&Extent](http://www.d3noob.org/2012/12/setting-scales-domains-and-ranges-in.html) - http://www.d3noob.org/2012/12/setting-scales-domains-and-ranges-in.html
+
+
+
+
+
