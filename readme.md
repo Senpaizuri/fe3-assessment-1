@@ -1,6 +1,6 @@
 # Assement 1
 For this first assesment I was tasked with handeling a dataset and making a visual of the data.
-[preview]
+[preview.png]
 ## Process
 The process from point A to B.
 ### The Setup
