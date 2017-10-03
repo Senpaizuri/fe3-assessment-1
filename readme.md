@@ -73,7 +73,7 @@ Whilst "fixing" the code i simultaneously refactored all of the deprecated code 
 
 ### The Fun Stuff
 
-Now that the code was fully functioning and showing the data I wanted to pimp the graph with some budget animations and gradients.
+Now that the code was fully functioning and showing the data I wanted to pimp the graph with some animations and gradients.
 
 For the gradients I made a **Hue** object. This stores the prefered colors for the gradient. Later in the code a loop is fired to make the svg gradient working. Svg gradients work diffrently then most so I found a solution and implemented it. 
 ```Javascript
