@@ -73,27 +73,66 @@ Whilst "fixing" the code i simultaneously refactored all of the deprecated code 
 
 Now that the code was fully functioning and showing the data I wanted to pimp the graph with some budget animations and gradients.
 
-For the gradients I made a **Hue** object. This stores the prefered colors for the gradient
+For the gradients I made a **Hue** object. This stores the prefered colors for the gradient. Later in the code a loop is fired to make the svg gradient working. Svg gradients work diffrently then most so I found a solution and implemented it. 
 ```Javascript
-hue =[                      
-      {
-        'color':'#5BC0EB',
-        'stop':'0%'
-      },
-      {
-        'color':'#9BC53D',
-        'stop':'50%'
-      },
-      {
-        'color':'#FDE74C',
-        'stop':'75%'
-      },
-      {
-        'color':'#F34213',
-        'stop':'100%'
-      }
-    ]
+//Extra code to get the gradient effect and animation working
+
+//Line 14
+var
+  hue =[                      
+        {
+          'color':'#5BC0EB',
+          'stop':'0%'
+        },
+        {
+          'color':'#9BC53D',
+          'stop':'50%'
+        },
+        {
+          'color':'#FDE74C',
+          'stop':'75%'
+        },
+        {
+          'color':'#F34213',
+          'stop':'100%'
+        }
+      ]
+      
+//Line 61
+svg.append('defs')
+    .append('linearGradient') 
+      .attr('x1', '0%')       
+      .attr('y1', '100%')     //Defines the direction of the gradient we're about to make
+      .attr('x2', '0%')
+      .attr('y2', '0%')
+      .attr('id','gradient')  //Lets the element fill the gradient we're about to make
+
+  hue.forEach(function(c){      //Runs loop forEach block in the hue object so that every color is displayed
+    d3.select('svg').select('linearGradient') //Selects the desired element
+      .append('stop')           //Appends the stop to the linearGradient to get that juicy gradient
+        .attr('offset', c.stop) //Sets the offset for the color
+        .attr('style','stop-color:'+c.color+';stop-opacity:1')  //Sets the stopcolor and opacity
+  })
+  
+//line 86
+animate() //Now the path exists run the animate function
+  
+//line 112
+function animate(){ //Creating a animation function, Toggles a class which starts the animation
+  var
+    line       = document.querySelector('#line'),
+    lineLength = line.getTotalLength()
+
+    line.style.strokeDasharray =
+    line.style.strokeDashoffset = lineLength  //Set the strokeDasharray and offset to it's own length to display it 'outofbounds'
+
+    setTimeout(function(){  //Toggle the animation a tat later to avoid loading weirdness
+      line.classList.add('animateLine')
+      line.style.strokeDashoffset = 0
+    },250)
+}
 ```
+
 ## Features
 *  [D3 Time](https://github.com/d3/d3/blob/master/API.md#time-formats-d3-time-format)       - https://github.com/d3/d3/blob/master/API.md#time-formats-d3-time-format
 *  [D3 Shapes](https://github.com/d3/d3/blob/master/API.md#shapes-d3-shape)     - https://github.com/d3/d3/blob/master/API.md#shapes-d3-shape
