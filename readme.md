@@ -1,6 +1,8 @@
 # Assement 1
 For this first assesment I was tasked with handeling a dataset and making a visual of the data.
+
 ![Preview](preview.png)
+
 ## Process
 The process from point A to B.
 ### The Setup
@@ -132,6 +134,14 @@ function animate(){ //Creating a animation function, Toggles a class which start
     },250)
 }
 ```
+To animate the chart I also wrote 3 lines of css.
+```CSS3
+.animateLine{
+  transition: 10s all ease;
+}
+```
+.
+And that's how I made the [assesment](https://senpaizuri.github.io/fe3-assessment-1/).
 
 ## Features
 *  [D3 Time](https://github.com/d3/d3/blob/master/API.md#time-formats-d3-time-format)       - https://github.com/d3/d3/blob/master/API.md#time-formats-d3-time-format
@@ -140,7 +150,12 @@ function animate(){ //Creating a animation function, Toggles a class which start
 *  [Gradients](https://www.w3schools.com/graphics/svg_grad_linear.asp)     - https://www.w3schools.com/graphics/svg_grad_linear.asp
 *  [Domain&Extent](http://www.d3noob.org/2012/12/setting-scales-domains-and-ranges-in.html) - http://www.d3noob.org/2012/12/setting-scales-domains-and-ranges-in.html
 
+## License
 
+Copyright (c) 2011-2017 Maikel Sleebos.
 
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
