@@ -154,6 +154,7 @@ And that's how I made the [assesment](https://senpaizuri.github.io/fe3-assessmen
 *  [Area Chart](https://bl.ocks.org/mbostock/3884914)    - https://bl.ocks.org/mbostock/3884914
 *  [Gradients](https://www.w3schools.com/graphics/svg_grad_linear.asp)     - https://www.w3schools.com/graphics/svg_grad_linear.asp
 *  [Domain&Extent](http://www.d3noob.org/2012/12/setting-scales-domains-and-ranges-in.html) - http://www.d3noob.org/2012/12/setting-scales-domains-and-ranges-in.html
+*  [Lines](https://www.dashingd3js.com/svg-paths-and-d3js)  - https://www.dashingd3js.com/svg-paths-and-d3js
 
 ## License
 
